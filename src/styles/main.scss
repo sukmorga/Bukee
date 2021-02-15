@@ -5,3 +5,90 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+$light-color:#fff;
+$accent-color:#65e496;
+
+
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+body {
+    font-family: 'Roboto Slab', serif;
+}
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.page-main {
+    background-image: url(../img/bg-main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $light-color;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 50px;
+    &__logo {
+        display: block;
+        background-image: url(../img/logo.svg);
+        width: 137px;
+        height: 28px;
+    }
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+        font-family: 'Open Sans', sans-serif;
+        &__item {
+            margin-left: 22px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+            transition: 0.2s;
+            &:hover {
+                border-bottom: 3px solid $accent-color;  
+            }
+        }
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+        &__link {
+            color: $light-color;
+            letter-spacing: 0.8px;
+            font-size: 16px;
+        }
+    }
+}
+
+.block-text {
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1.92px;
+        span {
+           display: block; 
+           color: $accent-color;
+           font-size: 18px;
+           letter-spacing: 0.9px;
+        }
+    }
+}
