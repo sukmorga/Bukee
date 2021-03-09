@@ -386,7 +386,8 @@ p {
         flex-basis: 49%;
         &_list {
             counter-reset: list;
-            column-count: 2;
+            -moz-column-count: 2;
+                 column-count: 2;
             &>li {
                 position: relative;
                 padding-left: 37px;
@@ -515,7 +516,8 @@ p {
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
         }
         h4 {
@@ -681,7 +683,8 @@ p {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
 }

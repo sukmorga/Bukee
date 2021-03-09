@@ -153,7 +153,20 @@
                         <li>Consectetur adipisicing elit</li>
                         <li>Labore et dolore magna</li>
                     </ol>
-                    <button>More</button>
+                    <ol class="block-about-table_list block-about-table_list_next" id="nextContentsList"
+                        style="display: none;">
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipisicing elit</li>
+                        <li>Labore et dolore magna</li>
+                        <li>Consectetur adipisicing elit</li>
+                        <li>Labore et dolore magna</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipisicing elit</li>
+                        <li>Labore et dolore magna</li>
+                        <li>Consectetur adipisicing elit</li>
+                        <li>Labore et dolore magna</li>
+                    </ol>
+                    <button id="nextContents">More</button>
                 </div>
             </div>
         </div>
@@ -392,6 +405,10 @@
             $('.block-carousel').slick({
                 dots: true,
                 arrows: false,
+            });
+            $("#nextContents").click(function () {
+                $("#nextContentsList").fadeIn();
+                $("#nextContents").hide();
             });
         });
     </script>
